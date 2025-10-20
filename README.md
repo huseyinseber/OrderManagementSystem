@@ -5,13 +5,14 @@ Path
 ----                                          
 C:\Users\<Kullanıcı İsmini Yaz>\Desktop\OrderManagementSystem
 
-
-# Migrations oluşturma
+# Migration oluştur
 dotnet ef migrations add InitialCreate --project OrderManagementSystem.Infrastructure --startup-project OrderManagementSystem.API
 
-# Yeniden oluştur
+# Database güncelle
 dotnet ef database update --project OrderManagementSystem.Infrastructure --startup-project OrderManagementSystem.API
 
-Projeyi Çalıştır
-
+# Projeyi çalıştır
 dotnet run --project OrderManagementSystem.API
+
+# swagger 
+https://localhost:7202/index.html
