@@ -19,3 +19,25 @@ https://localhost:7202/index.html
 
 # Frontend kısmı
 https://github.com/huseyinseber/OrderManagementFrontend
+
+# Frontend kısmı
+
+SELECT DISTINCT 
+    c.CustomerName,
+    ca.Country,
+    ca.City,
+    ca.Town,
+    ca.Address,
+    ca.Email,
+    ca.Phone
+FROM Customers c
+INNER JOIN Orders o ON c.CustomerId = o.CustomerId
+INNER JOIN OrderDetails od ON o.OrderId = od.OrderId
+INNER JOIN CustomerAddresses ca ON c.CustomerId = ca.CustomerId
+WHERE od.IsActive = 1 
+    AND o.IsActive = 1 
+    AND c.IsActive = 1 
+    AND ca.IsActive = 1
+ORDER BY c.CustomerName;
+
+
