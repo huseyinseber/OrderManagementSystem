@@ -14,5 +14,8 @@ dotnet ef database update --project OrderManagementSystem.Infrastructure --start
 # Projeyi çalıştır
 dotnet run --project OrderManagementSystem.API
 
-# swagger 
+# Swagger 
 https://localhost:7202/index.html
+
+# Frontend kısmı
+https://github.com/huseyinseber/OrderManagementFrontend
